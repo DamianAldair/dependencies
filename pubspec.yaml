@@ -11,37 +11,74 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
-  intl: any
-  cupertino_icons: ^1.0.2
-  flutter_native_splash: ^2.2.8
-  adaptive_theme: ^3.2.0
-  card_swiper: ^2.0.4
-  selectable: ^0.2.9
-  provider: ^6.0.3
-  path_provider: ^2.0.11
-  external_path: ^1.0.1
-  permission_handler: ^9.2.0
-  shared_preferences: ^2.0.15
-  sqflite: ^2.0.3+1
+  intl:
+  cupertino_icons:
+  adaptive_theme:
+  animate_do:
+  animations:
+  app_links:
+  app_settings:
+  app_version:
+  assets_audio_player:
+  audio_service:
+  audio_session:
+  audio_video_progress_bar:
+  audioplayers:
+  audiotagger:
+  camera:
+  card_swiper:
+  connectivity_plus:
+  device_info_plus:
+  dio:
+  external_path:
+  flutter_markdown:
+  flutter_native_splash:
+  fluttertoast:
+  headset_connection_event:
+  geolocator:
+  get_it:
+  github:
+  hasura_connect:
+  hive:
+  html:
+  just_audio:
+  local_auth:
+  mapbox_gl:
+  on_audio_edit:
+  on_audio_query:
+  on_audio_room:
+  open_file:
+  package_info_plus:
+  path_provider:
+  path:
+  permission_handler:
   photo_view:
     path: packages/photo_view
-  headset_connection_event:
-  audioplayers: ^1.0.1
-  video_player: ^2.4.6
-  video_thumbnail: ^0.5.2
-  dio: ^4.0.6
-  version: ^3.0.2
-  device_info_plus: ^8.1.0
-  package_info_plus: ^3.0.3
-  share_plus: ^6.3.1
+  provider:
+  pubspec_parse:
+  qr_code_scanner:
+  rxdart:
+  selectable:
+  share_plus:
+  shared_preferences:
+  sqflite:
+  supabase:
+  toast:
+  url_launcher:
+  url_router:
+  uuid:
+  version:
+  video_player:
+  video_thumbnail:
+  yaml:
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
-  flutter_launcher_icons: ^0.10.0
-  app_dev_config: ^0.0.5
-  dcdg: ^4.0.1
+  flutter_launcher_icons:
+  app_dev_config:
+  dcdg:
 
 flutter:
   uses-material-design: true
