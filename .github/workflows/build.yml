@@ -28,18 +28,20 @@ jobs:
           
       - run: flutter --version
           
-      - run: flutter doctor
-          
-      - run: flutter config
+      - run: flutter doctor -v
 
       - run: flutter pub get
+
+      - name: Build app (debug)
+        run: flutter build apk --debug
+
+      - name: Build app (release)
+        run: flutter build apk --release
 
       - run: dir C:\hostedtoolcache\windows
       
       - run: dir C:\Users\runneradmin
-
-      # - name: Build app (debug)
-      #   run: flutter build apk --debug
-
-      # - name: Build app (release)
-      #   run: flutter build apk --release
+      
+      - run: dir C:\Users\runneradmin\AppData\Local
+      
+      - run: dir C:\Users\runneradmin\AppData\Local\Android
