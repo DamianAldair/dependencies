@@ -43,8 +43,12 @@ jobs:
       - run: dir C:\Android
       - run: dir C:\Users\runneradmin
 
-#       - name: Build app (debug)
-#         run: flutter build apk --debug
+      - name: Build app (debug)
+        run: flutter build apk --debug
+        
+      - run: dir C:\Users\runneradmin
+      - run: dir C:\Users\runneradmin\.m2
+      - run: dir C:\Users\runneradmin\.gradle
 
 #       - name: Build app (release)
 #         run: flutter build apk --release
