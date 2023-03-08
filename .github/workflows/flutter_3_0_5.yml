@@ -71,4 +71,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: gradle
-          path: C:\gradle.zip
+          path: C:\gradle.7z
