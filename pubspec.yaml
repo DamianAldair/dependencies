@@ -44,6 +44,7 @@ dependencies:
   just_audio:
   local_auth:
   mapbox_gl:
+  mapsforge_flutter:
   on_audio_edit:
   on_audio_query:
   on_audio_room:
