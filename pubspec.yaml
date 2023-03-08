@@ -21,7 +21,7 @@ dependencies:
   # assets_audio_player:
   # audio_service:
   # audio_session:
-  audiofileplayer:
+  # audiofileplayer:
   audio_video_progress_bar:
   audioplayers:
   # audiotagger:
@@ -61,7 +61,7 @@ dependencies:
   supabase:
   super_editor:
   url_launcher:
-  # url_router:
+  url_router:
   version:
   video_player:
   video_thumbnail:
