@@ -33,6 +33,7 @@ dependencies:
   external_path:
   flutter_markdown:
   flutter_native_splash:
+  flutter_quill:
   fluttertoast:
   headset_connection_event:
   geolocator:
@@ -62,6 +63,7 @@ dependencies:
   shared_preferences:
   sqflite:
   supabase:
+  super_editor:
   toast:
   url_launcher:
   url_router:
