@@ -23,6 +23,7 @@ jobs:
         with:
           distribution: "temurin"
           java-version: "11.x"
+          cache: "gradle"
 
       - name: Setup Flutter
         uses: subosito/flutter-action@main
@@ -40,6 +41,7 @@ jobs:
         
       - run: dir C:\hostedtoolcache\windows\flutter
       - run: dir C:\Android
+      - run: dir C:\Users\runneradmin
 
 #       - name: Build app (debug)
 #         run: flutter build apk --debug
