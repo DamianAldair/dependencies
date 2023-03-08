@@ -43,7 +43,9 @@ jobs:
       # - name: Build app (release)
       #   run: flutter build apk --release
 
-      - name: Buscar paths (test)
+      - name: Buscar flutter sdk
         run: where flutter
+      - name: Buscar Java
         run: where java
+      - name: buscar home
         run: dir %homepath%
