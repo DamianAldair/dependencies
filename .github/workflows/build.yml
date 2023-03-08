@@ -20,6 +20,7 @@ jobs:
         
       - name: Setup Gradle
         uses: gradle/gradle-build-action@main
+        
       - name: Setup Java
         uses: actions/setup-java@main
         with:
@@ -34,35 +35,30 @@ jobs:
           
       - name: Version
         run: flutter --version
-          
-      - name: Show information about the installed tooling
-        run: flutter doctor -v
 
       - name: Get packages
         run: flutter pub get
-        
-      - run: dir C:\hostedtoolcache\windows\flutter
-      - run: dir C:\Android
-      - run: dir C:\Users\runneradmin
 
       - name: Build app (debug)
         run: flutter build apk --debug
         
-      - run: dir C:\Users\runneradmin
-      - run: dir C:\Users\runneradmin\.m2
-      - run: dir C:\Users\runneradmin\.gradle
+      - name: Build app (release)
+        run: flutter build apk --release
 
-#       - name: Build app (release)
-#         run: flutter build apk --release
+      - name: Upload Flutter SDK
+        uses: actions/upload-artifact@v3
+        with:
+          name: flutter-sdk
+          path: C:\hostedtoolcache\windows\flutter\
 
-#       - name: Upload Flutter SDK
-#         uses: actions/upload-artifact@v3
-#         with:
-#           name: flutter-sdk
-#           path: C:\hostedtoolcache\windows\flutter\
+      - name: Upload Android SDK
+        uses: actions/upload-artifact@v3
+        with:
+          name: android-sdk
+          path: C:\Android\
 
-#       - name: Upload Android SDK
-#         uses: actions/upload-artifact@v3
-#         with:
-#           name: android-sdk
-#           path: C:\Android\
+      - name: Upload Gradle
+        uses: actions/upload-artifact@v3
+        with:
+          name: gradle
+          path: C:\Users\runneradmin\.gradle
