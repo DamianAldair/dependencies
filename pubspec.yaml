@@ -21,7 +21,7 @@ dependencies:
   app_version:
   assets_audio_player:
   audio_service:
-  audio_session:
+  audiofileplayer:
   audio_video_progress_bar:
   audioplayers:
   audiotagger:
@@ -50,7 +50,6 @@ dependencies:
   open_file:
   package_info_plus:
   path_provider:
-  path:
   permission_handler:
   photo_view:
     path: packages/photo_view
@@ -66,7 +65,6 @@ dependencies:
   toast:
   url_launcher:
   url_router:
-  uuid:
   version:
   video_player:
   video_thumbnail:
