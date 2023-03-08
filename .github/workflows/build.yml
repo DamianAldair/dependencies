@@ -32,7 +32,8 @@ jobs:
         uses: subosito/flutter-action@main
         with:
           channel: "stable"
-        run: flutter --version
+          
+      - run: flutter --version
 
       - name: Install dependencies
         run: flutter pub get
