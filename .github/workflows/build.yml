@@ -54,11 +54,11 @@ jobs:
           name: flutter-sdk
           path: C:\hostedtoolcache\windows\flutter\
 
-      - name: Upload Android SDK
-        uses: actions/upload-artifact@v3
-        with:
-          name: android-sdk
-          path: C:\Android\
+#       - name: Upload Android SDK
+#         uses: actions/upload-artifact@v3
+#         with:
+#           name: android-sdk
+#           path: C:\Android\
 
       - name: Upload Gradle
         uses: actions/upload-artifact@v3
