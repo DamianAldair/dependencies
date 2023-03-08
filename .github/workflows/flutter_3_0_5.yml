@@ -1,0 +1,68 @@
+name: Build app (Flutter 3.0.5)
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+permissions:
+  contents: write
+
+jobs:
+  build_apk:
+    name: Build APKs
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@main
+        
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@main
+        
+      - name: Setup Java
+        uses: actions/setup-java@main
+        with:
+          distribution: "temurin"
+          java-version: "11.x"
+          cache: "gradle"
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@main
+        with:
+          flutter-version: "3.0.5"
+          channel: "stable"
+          
+      - name: Version
+        run: flutter --version
+
+      - name: Get packages
+        run: flutter pub get
+
+      - name: Analyze code
+        run: flutter analyze
+
+      - name: Build app (debug)
+        run: flutter build apk --debug
+        
+      - name: Build app (release)
+        run: flutter build apk --release
+
+#       - name: Upload Flutter SDK
+#         uses: actions/upload-artifact@main
+#         with:
+#           name: flutter-sdk
+#           path: C:\hostedtoolcache\windows\flutter\
+
+#       - name: Upload Android SDK
+#         uses: actions/upload-artifact@v3
+#         with:
+#           name: android-sdk
+#           path: C:\Android\
+
+      - name: Upload Gradle
+        uses: actions/upload-artifact@v3
+        with:
+          name: gradle
+          path: C:\Users\runneradmin\.gradle
