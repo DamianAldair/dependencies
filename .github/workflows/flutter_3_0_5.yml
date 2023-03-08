@@ -61,9 +61,7 @@ jobs:
 #           name: android-sdk
 #           path: C:\Android\
       - name: Zip
-        uses: montudor/action-zip@master
-        with:
-          args: zip -qq -r C:\gradle.zip C:\Users\runneradmin\.gradle
+        run: 7z a -t7z C:\gradle.7z C:\Users\runneradmin\.gradle\
 
       - name: Upload Gradle
         uses: actions/upload-artifact@v3
