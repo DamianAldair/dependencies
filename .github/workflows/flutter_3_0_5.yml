@@ -62,6 +62,7 @@ jobs:
 #           path: C:\Android\
 
       - run: tasklist
+      - run: taskkill /f /im java.exe /t
       
       - name: Zip
         run: 7z a -t7z C:\gradle.7z C:\Users\runneradmin\.gradle\
