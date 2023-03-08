@@ -18,14 +18,12 @@ dependencies:
   animations:
   app_links:
   app_settings:
-  app_version:
   assets_audio_player:
   audio_service:
   audiofileplayer:
   audio_video_progress_bar:
   audioplayers:
   audiotagger:
-  camera:
   card_swiper:
   connectivity_plus:
   device_info_plus:
@@ -41,21 +39,18 @@ dependencies:
   github:
   hasura_connect:
   hive:
-  html:
   just_audio:
   local_auth:
   mapsforge_flutter:
   on_audio_edit:
   on_audio_query:
   on_audio_room:
-  open_file:
   package_info_plus:
   path_provider:
   permission_handler:
   photo_view:
-    path: packages/photo_view
+  #  path: packages/photo_view
   provider:
-  pubspec_parse:
   qr_code_scanner:
   rxdart:
   selectable:
