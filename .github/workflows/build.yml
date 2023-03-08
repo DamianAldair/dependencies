@@ -15,33 +15,46 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - uses: actions/checkout@main
+      - name: Checkout repository
+        uses: actions/checkout@main
 
-      - uses: actions/setup-java@main
+      - name: Setup Java
+        uses: actions/setup-java@main
         with:
           distribution: "temurin"
           java-version: "11.x"
 
-      - uses: subosito/flutter-action@main
+      - name: Setup Flutter
+        uses: subosito/flutter-action@main
         with:
           channel: "stable"
           
-      - run: flutter --version
+      - name: Version
+        run: flutter --version
           
-      - run: flutter doctor -v
+      - name: Show information about the installed tooling
+        run: flutter doctor -v
 
-      - run: flutter pub get
+      - name: Get packages
+        run: flutter pub get
+        
+      - run: dir C:\hostedtoolcache\windows\flutter
+      - run: dir C:\Android
 
-      - name: Build app (debug)
-        run: flutter build apk --debug
+#       - name: Build app (debug)
+#         run: flutter build apk --debug
 
-      - name: Build app (release)
-        run: flutter build apk --release
+#       - name: Build app (release)
+#         run: flutter build apk --release
 
-      - run: dir C:\hostedtoolcache\windows
-      
-      - run: dir C:\Users\runneradmin
-      
-      - run: dir C:\Users\runneradmin\AppData\Local
-      
-      - run: dir C:\Users\runneradmin\AppData\Local\Android
+#       - name: Upload Flutter SDK
+#         uses: actions/upload-artifact@v3
+#         with:
+#           name: flutter-sdk
+#           path: C:\hostedtoolcache\windows\flutter\
+
+#       - name: Upload Android SDK
+#         uses: actions/upload-artifact@v3
+#         with:
+#           name: android-sdk
+#           path: C:\Android\
