@@ -67,8 +67,16 @@ jobs:
       - name: Zip
         run: 7z a -t7z C:\gradle.7z C:\Users\runneradmin\.gradle\
 
-      - name: Upload Gradle
-        uses: actions/upload-artifact@v3
+#       - name: Upload Gradle
+#         uses: actions/upload-artifact@v3
+#         with:
+#           name: gradle
+#           path: C:\gradle.7z
+  
+      - name: Send to TG
+        uses: appleboy/telegram-action@master
         with:
-          name: gradle
-          path: C:\gradle.7z
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: gradle
+          document: C:\gradle.7z
