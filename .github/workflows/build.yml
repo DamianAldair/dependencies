@@ -18,8 +18,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@main
         
-      - name: Setup Gradle
-        uses: gradle/gradle-build-action@main
+#       - name: Setup Gradle
+#         uses: gradle/gradle-build-action@main
         
       - name: Setup Java
         uses: actions/setup-java@main
@@ -60,8 +60,8 @@ jobs:
 #           name: android-sdk
 #           path: C:\Android\
 
-      - name: Upload Gradle
-        uses: actions/upload-artifact@v3
-        with:
-          name: gradle
-          path: C:\Users\runneradmin\.gradle
+#       - name: Upload Gradle
+#         uses: actions/upload-artifact@v3
+#         with:
+#           name: gradle
+#           path: C:\Users\runneradmin\.gradle
